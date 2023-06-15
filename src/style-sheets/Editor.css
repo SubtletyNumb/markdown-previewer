@@ -1,0 +1,35 @@
+.editor-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #464646;
+}
+
+.editor {
+  height: 100%;
+  border: 0px;
+  padding-left: 20px;
+  font-size: 14px;
+  outline: none;
+  overflow-y: scroll;
+  resize: none;
+  background-color: #f8f8f8;
+  font-family: monospace;
+}
+
+.editor:active {
+  border: 0px;
+}
+
+.editor-header {
+  display: flex;
+  border-bottom: 1px solid #464646;
+}
+.editor-header h4 {
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  font-size: 0.7em;
+  color: #969494;
+}/*# sourceMappingURL=Editor.css.map */

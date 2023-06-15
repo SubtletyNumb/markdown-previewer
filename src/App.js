@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Editor from './Components/Editor';
+import Previewer from './Components/Previewer';
+import './style-sheets/App.css';
+import { setInput } from './Features/editorSlice/editorSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { setDefaultInput } from './Features/editorSlice/editorSlice';
 function App() {
+  const dispatch = useDispatch()
+  const previewText = useSelector((store) => store.editor.input);
+  useEffect(()=>{
+    const defTextURL = require('./firstLoadText.md')
+    fetch(defTextURL).
+    then(response => response.text()).
+    then(text => {
+      dispatch(setDefaultInput(text))
+    });  
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className='main'>
+        <header className='header'>
+        <h2 className='tittle'>Markdown Previewer</h2>
+        </header>
+        <section className='editor-main-container'> 
+        <Editor />
+        <Previewer text={previewText}/>
+        </section>
+      </main>
     </div>
   );
 }

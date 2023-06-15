@@ -1,0 +1,55 @@
+:root {
+  font-size: 16px;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  background-color: #161616;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.editor {
+  background-color: #161616;
+  color: #c7c7c7;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #121213;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-height: 50px;
+  color: #c7c7c7;
+  box-shadow: -2px 5px 6px -5px rgba(0, 0, 0, 0.75);
+}
+.header .tittle {
+  font-size: 1.7em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: #c7c7c7;
+}
+
+.editor-main-container {
+  margin: 0;
+  height: 91%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #464646;
+}
+
+.scroll {
+  background: red;
+  overflow: scroll;
+}/*# sourceMappingURL=App.css.map */
